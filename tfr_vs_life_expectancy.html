@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>a thousand hero</title>
+  <meta charset="utf-8">
+  <!-- jQuery UI css -->
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- D3 tooltip -->
+  <link rel="stylesheet" href="css/d3-tip.css">
+  <!-- custom css -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/bubble_chart.css">
+</head>
+<body>
+  <header>
+    <nav class="main-nav">
+      <ul>
+        <li>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Credits</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section id="heading" class="home">
+    <div class="section-text">
+      <h1>CHIHIRO HIRAI</h1>
+      <h2>a thousand hero</h2>
+    </div>
+  </section>
+
+  <div class="section">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2 nopadding">
+          <h2>How Many Children Are We Having?</h2>
+          <h3 class="sub-heading gray-bottom-border">A look at the world's Total Fertility Rate (TFR) compared to Life Expectancy</h3>
+        </div>
+      </div>
+      <div class="row">        
+        <div class="col-md-8 offset-md-2 text-intro">
+          <p>
+            Families are having less children. Why? According to Our World in Data, several things happen as countries develop and become wealthier. Women have better access to education and are therefore prioritizing
+            their careers over having children. In addition, the cost of raising a child increases which is a significant factor. In 2018, USA Today estimated that raising a child in the US was $233,610. That's a lot of money!
+          </p>
+          <p class="gray-bottom-border">
+            But the world's population is increasing? Although women seem to be having less children, in many countries, advancements in healthcare and better standards in living conditions have contributed to the increase in life expectancy.
+            Generally speaking, from 1950 to 2015 the global trend has been that women are having fewer children, while the lifespan of the average person has increased. This is visualized in the interactive chart below.
+          </p>         
+          <p class="instructions">
+            Select the <b>Play</b> button below to see a visualization of the world's TFR against its life expectancy from 1950 to 2015. Select <b>Reset</b> to reset the year back to 1950.
+            Use the slider to select a specific year, and select a GDP category from the dropdown menu to filter based on a specific GDP range.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section light-gray padding-bottom-60 padding-top-60">
+    <div class="container">
+      <div class="row col-md-8 offset-md-2"><h3 class="sub-heading margin-bottom-25 gray-bottom-border">The World's Total Fertility Rate vs. Life Expectancy</h3></div>
+      <div class="row">
+          <div class="col-md-5 offset-md-2">
+              <button id="play-button" class="btn btn-primary">Play</button>
+              <button id="reset-button" class="btn btn-primary">Reset</button>                
+              <div id="slider-div">
+                  <label>Year: <span id="year">1800</span></label>
+                  <div id="date-slider"></div>
+              </div>
+          </div>
+          <div class="col-md-3">
+              <select id="gdp-select" class="form-control">
+                  <option selected value="all">All</option>
+                  <option value="< $2,500">&lt; $2,500</option>
+                  <option value="$2,500 - $4,999">$2,500 - $4,999</option>
+                  <option value="$5,000 - $9,999">$5,000 - $9,999</option>
+                  <option value="> $10,000">&gt; $10,000</option>
+              </select>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div id="chart-area"></div>  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section padding-top-60">
+    <div class="container">
+        <div class="row">        
+          <div class="col-md-3 offset-md-2">            
+            <h4>About the Bubble Chart</h4>         
+            <p>
+              The chart visualizes the total fertility rate (TFR), or the number of children that an average woman will have in her lifetime versus the average life expectancy per country.
+              The data begins with the year 1950. Within 65 years, the averge life expectancy increases from 47.84 to 71.85 years, while the average TFR decreases by almost half from 5.48 to 2.76 children per woman.
+            </p>
+          </div>    
+          <!-- <div class="col-md-2">            
+            <img src="images/world_buildings.jpg" alt="A globe constructed of many buildings.">
+          </div>     -->
+          <div class="col-md-3">
+            <h4>Population and GDP</h4>
+            <p>
+              The population is depicted by the area of the circles. In other words, the larger the population, the bigger the circle. The GDP per capita is visualized in colors.
+              The bluer in color a circle is, the higher the GDP per capita, and the lighter green in color a circle is, the lower the GDP per capita.
+            </p>
+          </div>
+          <div class="col-md-3">            
+            <h4>General Trend</h4>         
+            <p>
+              Although this is a generalization, can you see that as a country's GDP increases, so does the life expectancy while the TFR decreases?
+              Niger seems to be one of the exceptions. Its TFR in 1950 was 7.26, and in 2015 it was 7.29. Niger's GDP in 1950 was $1,148 and $895 in 2015. 
+              Though not by much, its GDP actually decreased, while its TFR increased.
+            </p>
+          </div>
+        </div>
+    </div>
+  </div>  
+
+  <div class="section light-gray padding-bottom-60 padding-top-60">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2 nopadding">
+          <h3 class="heading teal gray-bottom-border">About the Data</h3>  
+        </div>
+      </div>
+      <div class="row">        
+        <div class="col-md-8 offset-md-2 body-text">
+          <p>
+            The total fertility rate, life expectancy, GDP per capita, and population data was taken from Our World in Data. 
+            This data was then slightly processed and formatted for the purposes of this project using MYSQL and Excel.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 offset-md-2 nopadding">
+          <h4 class="heading">Sources:</h4>
+          <ul class="sources">
+            <li><a href="https://ourworldindata.org/fertility-rate">Our World in Data - Fertility Rate by Max Roser</a></li>
+            <li><a href="https://www.usatoday.com/story/money/personalfinance/2018/02/26/raising-child-costs-233-610-you-financially-prepared-parent/357243002/">USA Today -  Raising a child costs $233,610. Are you financially prepared to be a parent? by Aimee Picchi</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section padding-top-60">  
+    <div class="container">
+      <div class="row">        
+        <div class="col-md-8 offset-md-2 blurb-text">
+          <p>
+            For code credits and inspiration acknowledgements, please see <a href="credits.html">credits</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+            <div class="copyright"><small>Copyright. All Rights Reserved | Adapted from White Edition by <a target="_blank" rel="nofollow" href="http://www.iamsupview.be">Supview</a>.</small></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- load d3.js -->
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="js/d3-tip.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

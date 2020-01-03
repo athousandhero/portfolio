@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>a thousand hero</title>
+        <meta charset="utf-8">
+        <!-- jQuery UI css -->
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
+        <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+        <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- D3 tooltip -->
+        <link rel="stylesheet" href="css/d3-tip.css">
+        <!-- custom css -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/bubble_chart.css">
+        <style>
+            .axis line,
+            .axis path { stroke: #808080; }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="main-nav">
+            <ul>
+                <li>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Credits</a></li>
+                </ul>
+                </li>
+            </ul>
+            </nav>
+        </header>
+        
+        <section id="heading" class="home">
+            <div class="section-text">
+                <h1>CHIHIRO HIRAI</h1>
+                <h2>A Thousand Hero</h2>
+            </div>
+        </section>
+
+        <div class="section">  
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                    <h2>Fresh or Frozen?</h2>
+                    <h3 class="sub-heading gray-bottom-border">Comparing the Live Birth Rate for Fresh vs. Frozen Embryo Transfers</h3>
+                    </div>
+                </div>
+                <div class="row">        
+                    <div class="col-md-8 offset-md-2 text-intro">
+                        <p>
+                            In-vitro fertilization (IVF) procedures can be performed with either fresh or frozen embryos. Deciding which one to use is not always left to the individual patient to decide.
+                            Depending on the IVF cycle, some women will only have fresh embryos while others will only have frozen embryos to use. That being said, is there really a difference in outcome?
+                            In many cases, a live birth is the ultimate determinate of whether an IVF procedure is successful or not.
+                        </p>
+                        <p class="gray-bottom-border">
+                            Study results vary on whether embryo transfers are more successful with fresh embryos versus frozen embryos, but the results may not be so straightforward.
+                            The answer may be that it depends... on other variables, one of them being a woman's age. This is visualized in the chart below.
+                        </p>       
+                        <p class="instructions">
+                            Select an age group from the dropdown menu below to see a comparison of the live birth rate for fresh embryo transfers compared to frozen embryo transfers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section light-gray padding-bottom-60 padding-top-60">
+            <div class="container">
+                <div class="row col-md-8 offset-md-2"><h3 class="sub-heading margin-bottom-25 gray-bottom-border">Live Birth Rate for Fresh vs. Frozen Transfers by Age Group</h3></div>
+                <div class="row">
+                    <div class="col-md-3 offset-md-3"><span class="age-label">Age Group:  <span class="years">&lt; 35 years</span></span></div>
+                    <div class="col-md-3">
+                        <select id="age-select" class="form-control">
+                            <option selected value="<35">&lt; 35</option>
+                            <option value="35-37">35 - 37</option>
+                            <option value="38-40">38 - 40</option>
+                            <option value="41-42">41 - 42</option>
+                            <option value=">42">&gt; 42</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                    <div id="my_dataviz"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section padding-top-60">
+            <div class="container">
+                <div class="row">        
+                    <div class="col-md-4 offset-md-2">   
+                        <h4>About the Chart</h4>         
+                        <p>
+                            The chart shows the live birth rates for fresh and frozen embryos from 2003 to 2013. Overall as women age, the live birth rate resulting from IVF procedures decreases.
+                            This seems consistent with what biology tells us (regardless of fertility treatment intervention) that in general as women get older, their chances of childbearing decreases.
+                        </p>
+                    </div>  
+                    <div class="col-md-4"> 
+                        <h4>Are Fresh Embryos Better?</h4>         
+                        <p>
+                            Upon viewing the results for the age group less than 35, it would appear as though fresh embryo transfers result in a higher live birth rate than frozen transfers.
+                            But as the older the age group, the trend begins to shift. For women in the oldest age group (42 years and older) in the data, frozen embryo transfers result in more
+                            live births than fresh embryo transfers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+        <div class="section light-gray padding-bottom-60 padding-top-60">  
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 offset-md-2 nopadding">
+                <h3 class="heading teal gray-bottom-border">Improvements in Frozen Embryo Cryopreservation</h3>  
+              </div>
+            </div>
+            <div class="row">        
+              <div class="col-md-8 offset-md-2 body-text">
+                <p>
+                    For most of the age groups, the LBR for frozen embryos seems to have improved in the decade shown. According to Shady Grove Fertility, one explanation is due to the introduction of
+                    the cryopreservation process called vitrification, a 'flash or freeze technology' that prevents ice crystals from forming which greatly affect the freezing and thawing processes.
+                </p>
+                <p>
+                    In regards to the oldest age group in the data (greater than 42 years), frozen embryos result in more live births, primarily because they use the eggs that were harvested from their bodies
+                    when they were younger which tend to be of better quality. The improvements in the freezing technology most likely play a role in this as well. On the other hand, women who use
+                    fresh embryos may not be experiencing as much success due to the quality of their eggs at this age.
+                </p>
+                <p>
+                  There are many factors that can influence a successful IVF cycle. The obvious ones being age and medical diagnosis (e.g. fibroids, endometriosis, PCOS), but there may be other factors
+                  that are still unknown to doctors. 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section padding-top-60">  
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 offset-md-2 nopadding">
+                <h3 class="heading gray-bottom-border">About the Data</h3>  
+              </div>
+            </div>
+            <div class="row">        
+              <div class="col-md-8 offset-md-2 body-text">
+                <p>
+                    The data for this project was taken from the Society for Assisted Reproductive Technology. According to their website, they are 'the primary organization of professionals dedicated to the practice of IVF, or assisted reproductive technology (ART).'
+                    ART facilities can choose to join SART through a process set forth by SART.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 offset-md-2 nopadding">
+                    <h4 class="heading">Sources:</h4>
+                    <ul class="sources">
+                        <li><a href="https://www.sart.org/">Society for Assisted Reproductive Technology official site</a></li>
+                        <li><a href="https://www.sartcorsonline.com/Report/ClinicSummaryReportPublic?ClinicPKID=0">SART CORS Data</a></li>
+                        <li><a href="https://www.shadygrovefertility.com/blog/treatments-and-success/7-reasons-why-frozen-embryos-can-increase-your-chances-of-a-successful-pregnancy/">7 REASONS WHY FROZEN EMBRYOS CAN INCREASE YOUR CHANCES OF A SUCCESSFUL PREGNANCY by Shady Grove Fertility</a></li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section light-gray padding-top-60">  
+          <div class="container">
+            <div class="row">        
+              <div class="col-md-8 offset-md-2 blurb-text">
+                <p>
+                  For code credits and inspiration acknowledgements, please see <a href="credits.html">credits</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <footer>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright"><small>Copyright. All Rights Reserved | Adapted from White Edition by <a target="_blank" rel="nofollow" href="http://www.iamsupview.be">Supview</a>.</small></div>
+                </div>
+              </div>
+            </div>
+        </footer>
+        
+        <!-- load d3.js -->
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="js/d3-tip.js"></script>
+        <script src="js/multiple-line-chart.js"></script>
+    </body>
+</html>

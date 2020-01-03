@@ -1,0 +1,133 @@
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>a thousand hero</title>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- D3 tooltip -->
+        <link rel="stylesheet" href="css/d3-tip.css">
+        <!-- custom css -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <style>
+            .axis line,
+            .axis path { stroke: #808080; }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="main-nav">
+            <ul>
+                <li>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Credits</a></li>
+                </ul>
+                </li>
+            </ul>
+            </nav>
+        </header>
+        
+        <section id="heading" class="home">
+            <div class="section-text">
+                <h1>CHIHIRO HIRAI</h1>
+                <h2>A Thousand Hero</h2>
+            </div>
+        </section>
+
+        <div class="section">  
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                    <h2>How Fertile is the US?</h2>
+                    <h3 class="sub-heading gray-bottom-border">A Brief Glance at the Fertility Rate of the 50 US States</h3>
+                    </div>
+                </div>
+                <div class="row">        
+                    <div class="col-md-8 offset-md-2 text-intro">
+                    <p>
+                        Among the 50 states in the United States, are there any interesting trends in fertility? Taking CDC data from 2018, a basic color-coded map was prooduced to see if there were any visible trends of note.
+                        From the data, South Dakota had the highest rate with 73.6, while Vermont was the lowest with 47.2.
+                    </p>
+                    <p class="gray-bottom-border">
+                        It would be interesting to break the rates down by age group or race per state. Also, do other factors like religion or community culture contribute to the data?
+                        If so, how?
+                    </p>
+                    <p class="instructions">
+                        Hover over a state in the map below to see the fertility rate and number of births for that state.
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section light-gray padding-bottom-60 padding-top-60">
+            <div class="container">
+                <div class="row col-md-8 offset-md-2"><h3 class="sub-heading margin-bottom-25 gray-bottom-border">Fertility Rate of the US in 2018 (Births per 1,000 Women Aged 15-44)</h3></div>          
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <div id="my_dataviz" style="margin-top: 0;">
+                            <svg height="600" width="900"></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+        <div class="section padding-bottom-60 padding-top-60">  
+            <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 nopadding">
+                <h3 class="heading teal gray-bottom-border">About the Data</h3>  
+                </div>
+            </div>
+            <div class="row">        
+                <div class="col-md-8 offset-md-2 body-text">
+                <p>
+                    The fertility and birth rate data was taken from the CDC Centers for Disease Control and Prevention website.
+                </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 offset-md-2 nopadding">
+                <h4 class="heading">Sources:</h4>
+                <ul class="sources">
+                    <li><a href="https://www.cdc.gov/nchs/fastats/state-and-territorial-data.htm">State and Territorial Data</a></li>
+                </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="section light-gray padding-top-60">  
+            <div class="container">
+            <div class="row">        
+                <div class="col-md-8 offset-md-2 blurb-text">
+                <p>
+                    For code credits and inspiration acknowledgements, please see <a href="credits.html">credits</a>.
+                </p>
+                </div>
+            </div>
+            </div>
+        </div>
+    
+        <footer>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright"><small>Copyright. All Rights Reserved | Adapted from White Edition by <a target="_blank" rel="nofollow" href="http://www.iamsupview.be">Supview</a>.</small></div>
+                </div>
+              </div>
+            </div>
+        </footer>
+        
+        <!-- load d3.js -->
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="js/d3-tip.js"></script>
+        <script src="js/choropleth-map.js"></script>
+    </body>
+</html>

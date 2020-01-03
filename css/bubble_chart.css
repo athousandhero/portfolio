@@ -1,0 +1,70 @@
+#chart-area {
+	overflow-x: auto;
+	margin-top: 40px;
+}
+
+#chart-area svg {
+	margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* 
+.navbar-brand {
+	height: 60px;
+	padding: 5px 0px;
+} */
+
+/*** chart nav ***/
+#reset-button, #play-button, #slider-div {
+	float: left;
+	margin-right:10px;
+}
+
+#slider-div {	
+	width: 280px;
+	margin-left:10px;
+}
+
+#slider-div label {
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+
+#reset-button, #play-button {
+	background-color: #00796B;
+	margin-top: 5px;
+	margin-bottom:10px;
+	padding: 3px 8px;
+}
+
+#continent-select {
+	width: 150px;
+	/* float: right; */
+	margin-top: 5px;
+}
+
+
+
+/*** style.css ***/
+/* 
+.container.white > .row > div {
+	background-color: #fafafa;
+}
+
+.container.white .row:nth-child(1) > div {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.container.white .row:nth-child(1) > div {
+}
+
+.container.white .row:nth-child(1) > div:first-child {
+	border-radius: 4px;
+}
+
+.container.white .row:nth-child(1) > div:last-child {
+	border-radius: 4px;
+} */
+
