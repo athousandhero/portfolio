@@ -228,62 +228,6 @@ p {
 	}
 }
 
-
-/* /* html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-	margin:0;
-	padding:0
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display:block
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-fieldset, img {
-	border: 0;
-}
-address, caption, cite, dfn, th, var {
-	font-style:normal;
-	font-weight:normal
-}
-caption, th {
-	text-align:left
-}
-
-q:before, q:after {
-	content:""
-}
-abbr, acronym {
-	border:0
-} 
-::selection {
-	color:#e00966;
-}
-::-moz-selection {
-color:#e00966;
-}
-
-a, a:link {
-	color:#e00966;
-	text-decoration:none;
-}
-a:hover {
-	color:#000;
-}
- */
-
-/* .more {
-	background:url("../images/arrow.gif") no-repeat right 50%;
-	padding-right:20px;
-} 
-
-#main-content, footer {
-	margin: 0 auto;
-	max-width: 950px;
-}*/
-
 header {
 	width: 100%;
 	height: 45px;
@@ -316,18 +260,6 @@ header .main-nav li a:hover, header .main-nav li a.active {
 	color: #666;
 }
 
-/* #main-content .text-intro {
-	border-bottom: 1px solid #e5e4e4;
-	float: left;
-	width:100%;
-	padding:25px 0;
-	margin-bottom:40px;
-}
-#main-content .text-intro h2 {
-	font-size:40px;
-	color:#606060;
-	text-align:center;
-} */
 
 /* card */
 h3.card-title, 
@@ -429,82 +361,6 @@ footer .copyright a:hover {
 #home-head h1 span {
 	color:#fff;
 	display:block;
-}
-
-#contact-form {
-	padding:0;
-	overflow:hidden;
-	width:95%;
-	margin:0 auto;
-	position:relative;
-}
-#contact-form textarea {
-	font-weight:400;
-	font-size:14px;
-	resize:none;
-	color:#4f4f4f;
-	float:left;
-	margin-top:0;
-	width:400px;
-	height:115px;
-	margin-bottom:10px;
-	padding:19px 13px 14px 50px;
-	border:1px solid #f1f1f1;
-	font-family:"Open Sans", sans-serif;
-}
-#contact-form #message {
-	box-shadow:0 1px 3px rgba(0,0,0,0.1);
-}
-#contact-form .text-input {
-	font-weight:400;
-	font-size:14px;
-	float:right;
-	display:block;
-	width:355px;
-	height:19px;
-	color:#4f4f4f;
-	padding:13px 13px 13px 51px;
-	margin-bottom:20px;
-	border:1px solid #f1f1f1;
-	box-shadow:0 1px 3px rgba(0,0,0,0.1);
-	font-family:"Open Sans", sans-serif;
-}
-#contact-form .btn-input {
-	float:right;
-	display:block;
-	width:420px;
-	height:82px;
-	border:none;
-	padding:0;
-	margin:0;
-	cursor:hand;
-	font-size:20px;
-	color:#FFF;
-	background-color:#e00966;
-	font-family:"Open Sans", sans-serif;
-	transition:all 0.5s ease-in-out;
-}
-#contact-form .btn-input:hover {
-	background-color:#e187ae;
-	color:#FFF;
-}
-#contact-form .crayonico {
-	position:absolute;
-	left:15px;
-	top:15px;
-	background-image:url("../images/crayon.png");
-	background-repeat:no-repeat;
-	width:23px;
-	height:23px;
-}
-#contact-form .emailico {
-	position:absolute;
-	left:495px;
-	top:15px;
-	background-image:url("../images/email.png");
-	background-repeat:no-repeat;
-	width:22px;
-	height:16px;
 }
 
 /*** SART Live Birth Rate per Year ***/
