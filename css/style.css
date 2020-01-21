@@ -93,7 +93,7 @@ p {
 #heading h2 {
 	font-size:13px;
 	color:#FFF;
-	line-height:1em;
+	line-height: 20px;
 	letter-spacing:2px;
 	text-transform:uppercase;
 }
